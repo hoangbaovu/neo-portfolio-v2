@@ -1,0 +1,41 @@
+extends layouts/default
+
+block title
+	| Portfolio - Vu Hoang | Front-end Developer
+
+block content
+	//- Preloader
+
+	#preloader
+		#status
+			.pulse
+	
+	#main.row
+		header#sidebar
+			a( href="#welcome", class="logo hidden-xs", title="Vu Hoang | Front-end Developer")
+			ul#nav-menu.list-unstyled
+				li(data-menuanchor="welcome").active
+					a(href="#welcome")
+						span
+							i(class="fa fa-globe")
+						span(class="sub") Hello!
+				li(data-menuanchor="about")
+					a(href="#about")
+						span
+							i(class="fa fa-user")
+						span(class="sub") Giới Thiệu
+				li(data-menuanchor="works")
+					a(href="#works")
+						span
+							i(class="fa fa-briefcase")
+						span(class="sub") Dự Án
+				li(data-menuanchor="contact")
+					a(href="#contact")
+						span
+							i(class="fa fa-envelope")
+						span(class="sub") Liên hệ
+		include content/ineo-welcome
+		include content/ineo-about
+		include content/ineo-works
+		include content/ineo-contact
+

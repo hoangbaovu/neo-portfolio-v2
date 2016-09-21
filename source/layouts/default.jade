@@ -1,0 +1,35 @@
+doctype html
+html(lang="vi", prefix="og: http://ogp.me/ns#")
+	head
+		title
+			block title
+		meta( charset='utf-8' )
+		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+		meta( name='description', content='Portfolio - Vu Hoang | Front-end Developer')
+		
+		//- OG
+		
+		meta( property="og:title", content="Portfolio - Vu Hoang | Front-end Developer")
+		meta( property="og:description", content="Portfolio - Vu Hoang | Front-end Developer")
+		meta( property="og:url", content="http://ineo.vn/")
+		<meta property="og:image" content="/assets/img/logo-neo.png" />
+		
+		link( rel='shortcut icon', href="/assets/img/favicon.ico" )
+
+		//- Theme
+
+		<style>#status{width:40px;height:40px;margin:0 auto;background-color:#fff;border-radius:100%;-webkit-animation:scaleout 1s infinite ease-in-out;animation:scaleout 1s infinite ease-in-out}.pulse{animation:1s ease-in-out 0s normal none infinite scaleout;background-color:#fff;border-radius:40px;height:100%;width:100%}@-webkit-keyframes scaleout{0%{-webkit-transform:scale(0)}to{-webkit-transform:scale(1);opacity:0}}@keyframes scaleout{0%{transform:scale(0);-webkit-transform:scale(0)}to{transform:scale(1);-webkit-transform:scale(1);opacity:0}}</style>
+
+		link( href='assets/css/theme.css', rel='stylesheet' )
+
+		//- Script
+
+		script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+		script
+			include ../scripts/js/scripts.js
+		script( src='assets/js/app.js' )
+
+	body
+		script
+			include ../scripts/js/ga.js
+		block content

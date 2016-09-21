@@ -1,0 +1,34 @@
+@mixin border-radius($radius: 50%) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+			border-radius: $radius;
+}
+
+@mixin transition ($property: all, $durations: 0.3s, $function: ease) {
+	-webkit-transition: $property $durations $function;
+	   -moz-transition: $property $durations $function;
+	    -ms-transition: $property $durations $function;
+	     -o-transition: $property $durations $function;
+	        transition: $property $durations $function;
+}
+
+// Media Queries
+
+@mixin media($media) {
+	@if $media == handhelds {
+		@content
+	}
+	@else if $media == phones {
+		@media screen and (max-width: 480px) { @content; }
+	}
+	@else if $media == tablets {
+		@media screen and (max-width: 768px) { @content; }
+	}
+	@else if $media == desktops {
+		@media screen and (max-width: 992px) { @content; }
+	}
+	@else if $media == large-desktops {
+		@media screen and (max-width: 1200px) { @content; }
+	}
+}
+
